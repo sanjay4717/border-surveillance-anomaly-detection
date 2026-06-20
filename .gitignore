@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Backend runtime data
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/detections/*
+!backend/detections/.gitkeep
+backend/detections.db
+*.pt
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Env files
+.env
+*.env.local

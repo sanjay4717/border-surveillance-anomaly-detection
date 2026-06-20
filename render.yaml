@@ -1,0 +1,18 @@
+# Render Blueprint — lets you deploy the backend with one click using
+# "New + > Blueprint" on Render, pointing at this repo.
+#
+# IMPORTANT: Because the Dockerfile needs access to both backend/ and
+# ml/ folders, the Docker build context (dockerContext) is set to the
+# repository root, not the backend folder.
+
+services:
+  - type: web
+    name: border-surveillance-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
