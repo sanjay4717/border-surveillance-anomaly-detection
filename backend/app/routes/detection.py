@@ -23,8 +23,8 @@ from app.models.model_loader import get_detector
 
 router = APIRouter()
 
-UPLOAD_DIR = Path(__file__).resolve().parents[3] / "uploads"
-DETECTIONS_DIR = Path(__file__).resolve().parents[3] / "detections"
+UPLOAD_DIR = Path(__file__).resolve().parents[2] / "uploads"
+DETECTIONS_DIR = Path(__file__).resolve().parents[2] / "detections"
 UPLOAD_DIR.mkdir(exist_ok=True)
 DETECTIONS_DIR.mkdir(exist_ok=True)
 
